@@ -1,0 +1,243 @@
+@import url(https://db.onlinewebfonts.com/c/e7322a6673613ab13604fadda3d20e56?family=VALORANT);
+
+body {
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d9227692-9ff9-4abd-98e1-4889a24cd232/df2wiqo-f5cf2cd3-3107-443c-b220-3c7c32e58919.png/v1/fill/w_1280,h_721/valorant_wallpaper_hd_neon_sign_by_eclipsewideedit_df2wiqo-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIxIiwicGF0aCI6IlwvZlwvZDkyMjc2OTItOWZmOS00YWJkLTk4ZTEtNDg4OWEyNGNkMjMyXC9kZjJ3aXFvLWY1Y2YyY2QzLTMxMDctNDQzYy1iMjIwLTNjN2MzMmU1ODkxOS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.zRI_Mal_md0fr8R6U5pa0rWXR1jn9im3_dg_z01PDes");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  padding: 0;
+  margin: 0;
+  font-family: VALORANT;
+}
+
+.btn-go {
+  width: 20px;
+  background-color: #fff;
+  z-index: 1111;
+}
+
+body.jett {
+  background-color: #222; /* Color gris oscuro */
+}
+
+.hidden {
+  display: none;
+}
+
+body:has(.jett-card:hover) {
+  background-image: url("https://w0.peakpx.com/wallpaper/28/428/HD-wallpaper-jett-valorant-fps-game-jett-riot-riotbrasil-riotgames-valorant-valorantbrasil-wiwferr.jpg");
+}
+
+.container {
+  display: flex;
+  backdrop-filter: blur(4px);
+  height: 100vh;
+}
+
+.card-container {
+  position: relative;
+  height: 450px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  perspective: 1000px;
+  cursor: pointer;
+  margin-top: 10%;
+}
+
+.card-container .card {
+  width: 200px;
+  background: url("https://www.valorantinfo.gg/wp-content/uploads/2021/10/valorant-mirrored-edge-player-card.jpg");
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transition: all 0.1s linear;
+}
+
+.card-container::before {
+  position: absolute; 
+  color: white;
+  font-size: 42px;
+  bottom: 10px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 0.4s linear;
+}
+
+.card-container .card::after {
+  content: '';
+  position: absolute; 
+  z-index: 1;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background: rgb(243,236,230);
+  background: linear-gradient(180deg, transparent 20%, rgba(0,0,0,0.8) 100%);
+}
+
+.jett-card::before {
+  content: 'H E B I';
+}
+
+.avatar {
+  position: absolute;
+  bottom: 0;
+  width: 280px;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(0);
+  transition: transform 0.3s linear, opacity 0.3s linear;
+}
+
+.jett-card .avatar {
+  width: 300px;
+}
+
+.card-container:hover .avatar {
+  transform: translateY(-20%);
+  opacity: 1;
+}
+
+.card-container:hover .card {
+  transform: rotateX(20deg);
+}
+
+.card-container:hover::before {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.card-container:hover {
+  -webkit-box-shadow: 0px 300px 90px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 300px 90px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 300px 90px 0px rgba(0,0,0,0.75);
+}
+
+.welcome-text {
+  position: absolute;
+  bottom: 165px;
+  width: 100%;
+  text-align: center;
+  font-size: 3em;
+  color: red;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: rainbowText 4s linear infinite;
+  text-shadow: 2px 2px 4px black;
+}
+
+@keyframes rainbowText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.pulse-button {
+  position: absolute;
+  top: 45%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  background-color: #1d1f21;
+  border: 2px solid #ff007a;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 0, 122, 0.5), 0 0 20px rgba(255, 0, 122, 0.3);
+  text-shadow: 1px 1px 2px black;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 0, 122, 0.5), 0 0 10px rgba(255, 0, 122, 0.3);
+  }
+  70% {
+    box-shadow: 0 0 20px rgba(255, 0, 122, 0.5), 0 0 30px rgba(255, 0, 122, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 0, 122, 0.5), 0 0 10px rgba(255, 0, 122, 0.3);
+  }
+}
+
+/* Estilos para la carta */
+.card-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  background: #e0e1dc;
+  box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+  transition: 1s;
+  display: none; /* Inicialmente oculta */
+}
+
+.card-section .card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-section .imgBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: .7s;
+}
+
+
+.card-section .bark {
+  position: absolute;
+  background: #e0e1dc;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .7s;
+}
+
+.card-section .imgBox img {
+  min-width: 250px;
+  max-height: 400px;
+}
+
+.card-section .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 0 0 10px;
+  z-index: -1;
+  margin-top: 70px;
+}
+
+.card-section .details p {
+  font-size: 15px;
+  line-height: 5px;
+  transform: rotate(-10deg);
+  padding: 0 0 0 20px;
+}
+
+.card-section .details h4 {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
